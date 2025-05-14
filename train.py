@@ -31,7 +31,7 @@ X = imp.transform(X)
 # Linear model
 #clf = LogisticRegression()
 #yhat = cross_val_predict(clf, X, y, cv=5)
-clf = RandomForeestClassifier(n_estimators=100, random_state=43)
+clf = RandomForestClassifier(n_estimators=100, random_state=42)
 yhat = cross_val_predict(clf, X, y, cv=5)
 
 acc = np.mean(yhat==y)
